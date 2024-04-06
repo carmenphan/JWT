@@ -1,0 +1,156 @@
+{
+	"info": {
+		"_postman_id": "3fe0d6af-a03b-466b-8706-bee2e77f0826",
+		"name": "JWT_NODEJS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6693478"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"cuongphan1\",\r\n    \"password\": \"123456789\",\r\n    \"email\" : \"cuongphan1@gmail.comn\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/v1/auth/register",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"cuongphan1\",\r\n    \"password\":\"123456789\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/v1/auth/login",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllUsers",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjExMTYwMWUyZDZkYmE2YjlmNjc2ODMiLCJhZG1pbiI6ZmFsc2UsImlhdCI6MTcxMjM5NTk1NCwiZXhwIjoxNzEyMzk2MDE0fQ.czeGXOvOnlKEQf2Uap5S7DTJ5E3gWYS5aeLGvuBbh9s",
+						"type": "text"
+					},
+					{
+						"key": "Cookie",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/api/v1/users",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "refreshToken",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjExMTYwMWUyZDZkYmE2YjlmNjc2ODMiLCJhZG1pbiI6ZmFsc2UsImlhdCI6MTcxMjM5NTk1NCwiZXhwIjoxNzEyMzk2MDE0fQ.czeGXOvOnlKEQf2Uap5S7DTJ5E3gWYS5aeLGvuBbh9sKEQf2Uap5S7DTJ5E3gWYS5aeLGvuBbh9s",
+						"type": "text"
+					},
+					{
+						"key": "cookie",
+						"value": "refreshToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjExMTYwMWUyZDZkYmE2YjlmNjc2ODMiLCJhZG1pbiI6ZmFsc2UsImlhdCI6MTcxMjM5NTk1NCwiZXhwIjoxNzQzOTMxOTU0fQ.tPBm90MsfL99Hkr5-mMn_tkSZ94XtTFPKVLMKGxj5GM; Path=/; HttpOnly; Expires=Sun, 06 Apr 2025 09:32:34 GMT;",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/api/v1/auth/refeshToken",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"refeshToken"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "adminUrl",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjExMTYwMWUyZDZkYmE2YjlmNjc2ODMiLCJhZG1pbiI6ZmFsc2UsImlhdCI6MTcxMjM5Nzk0MCwiZXhwIjoxNzEyNDA1MTQwfQ.84rT38MIJELpcAGRY6_G8sQHSB_CeLRzPF7jVENxbcg",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/api/v1/admin",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"admin"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
